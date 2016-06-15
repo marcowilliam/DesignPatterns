@@ -1,1 +1,1 @@
-
+Você está desenvolvendo um software para uma empresa de venda de livros. Já foram identificados vários problemas quando os vendedores utilizam o sistema para realizar consultas no estoque de livros. Sabendo que todos os livros são persistidos em uma base de dados, e que as consultas acessam essa base criando várias instâncias. Como melhorar essa conexão com o banco utilizando padrões de projeto GoF? Modele, implemente (em Java) e justifique.
