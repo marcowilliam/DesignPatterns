@@ -3,13 +3,13 @@ package singleton;
 public class DataBase {
 	private static DataBase instance;
 	
-	public DataBase(){
+	private DataBase(){
 		
 	}
 	
 	public static synchronized DataBase getInstance(){
-		if (DataBase.instance==null){
-			DataBase.instance = new DataBase();
+		if (instance==null){
+			initializeInstance();
 			System.out.println("creating database");
 			
 		}
@@ -17,7 +17,15 @@ public class DataBase {
 			System.out.println("database already created");
 		} 
 		
-		return DataBase.instance;
-		
+		return instance;
 	} 
+	
+	private static synchronized void initializeInstance(){
+		if (instance==null){
+			instance = new DataBase();	
+		}
+	}
+
+	
+	
 }
